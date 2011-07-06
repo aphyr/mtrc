@@ -1,0 +1,3 @@
+module Mtrc
+  VERSION = '0.0.1'
+end
