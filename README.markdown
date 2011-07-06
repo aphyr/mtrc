@@ -1,12 +1,12 @@
-Mtrc
-====
-(Metric, for short)
-----
+Mtrc (Metric, for short)
+===
 
 A small library to accumulate metrics and extract basic statistics from them.
-Want a latency profile of your Rack app? Boom:
+Want a latency profile of your Rack app? Boom.
 
     gem install mtrc
+ 
+Middleware all up in this bitch:
 
     class MyMetrics
       def initialize(app)
@@ -40,4 +40,6 @@ Want a latency profile of your Rack app? Boom:
 Which requests take the longest?
 
     @m << Mtrc::Sample.new dt, env[:PATH_INFO]
-    (@m % 95).value # => "the 95th percentile request path"
+    (@m % 95).value # => "?bacon=strips&bacon=strips&bacon=strips"
+
+It's MIT licensed, bro. Pull requests? Roll one up homie.
