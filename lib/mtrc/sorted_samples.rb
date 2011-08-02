@@ -44,7 +44,12 @@ class Mtrc::SortedSamples < Mtrc::Samples
   # Returns the sample at probrotion f of the list. For example, at(.95) is
   # the 95th percentile value.
   def at(f)
-    self[(f * @ns.size).round] 
+    i = (f * @ns.size).floor
+    if i == @ns.size
+      @ns[i - 1]
+    else
+      @ns[i]
+    end
   end
 
   def clear
