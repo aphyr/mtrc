@@ -38,7 +38,7 @@ class Mtrc::SortedSamples < Mtrc::Samples
 
   # Returns the sample at p percentage. Broffered 50, returns the median.
   def %(p)
-    at(p * 100)
+    at(p / 100.0)
   end
 
   # Returns the sample at probrotion f of the list. For example, at(.95) is
