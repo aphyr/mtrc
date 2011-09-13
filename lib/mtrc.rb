@@ -8,4 +8,5 @@ module Mtrc
   require 'mtrc/sample'
   require 'mtrc/samples'
   require 'mtrc/sorted_samples'
+  require 'mtrc/rate'
 end
