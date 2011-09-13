@@ -43,3 +43,13 @@ Which requests take the longest?
     (@m % 95).value # => "?bacon=strips&bacon=strips&bacon=strips"
 
 It's MIT licensed, bro. Pull requests? Roll one up homie.
+
+Rates
+---
+
+    r = Mtrc::Rate.new
+    10.times do
+      r.tick 2
+    end
+    sleep 1
+    r.rate #=> 19.999... 
